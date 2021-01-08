@@ -35,3 +35,5 @@ A P2P chat application client for local area network (Windows) developed using Q
 
 #### ScreenShots
 ![KSSA_Login](https://github.com/Sovea/Qt5_P2P_ChatClient-KSSA/blob/master/image/Screenshot/KSSA_Login.png)
+
+![KSSA_ChatExample](https://github.com/Sovea/Qt5_P2P_ChatClient-KSSA/blob/master/image/Screenshot/KSSA_ChatExample.png)
