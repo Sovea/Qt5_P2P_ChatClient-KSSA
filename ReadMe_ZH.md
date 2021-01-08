@@ -31,3 +31,9 @@
 5.文件传输（确认机制）（可传送较大文件）
 
 6.一对一聊天消息面板
+
+
+#### 效果截图
+![KSSA_Login](https://github.com/Sovea/Qt5_P2P_ChatClient-KSSA/blob/master/image/Screenshot/KSSA_Login.png)
+
+![KSSA_ChatExample](https://github.com/Sovea/Qt5_P2P_ChatClient-KSSA/blob/master/image/Screenshot/KSSA_ChatExample.png)
