@@ -1,0 +1,21 @@
+QListWidget{
+	background:white;
+	color:black;
+	border:none;
+	outline: none;
+}
+QListWidget::item{
+    height: 80px;
+}
+ 
+QListWidget::item:hover{
+    background:rgb(190, 190, 190);
+}
+
+QListWidget::item:selected{
+	background:rgb(180, 180, 180);
+	outline: none;
+}
+QListWidget::item:visited{
+	outline: none;
+}
