@@ -1,4 +1,5 @@
 # Qt5_P2P_ChatClient-KSSA
+**[中文介绍](https://github.com/Sovea/Qt5_P2P_ChatClient-KSSA/blob/master/ReadMe_ZH.md)**
 
 A P2P chat application client for local area network (Windows) developed using Qt5 and C++.
 
