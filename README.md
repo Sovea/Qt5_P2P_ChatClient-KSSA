@@ -34,4 +34,4 @@ A P2P chat application client for local area network (Windows) developed using Q
 6. One-to-one chat message panel
 
 #### ScreenShots
-![KSSA_Login](/image/master/image/Screenshot/KSSA_Login.png)
+![KSSA_Login](https://github.com/Sovea/Qt5_P2P_ChatClient-KSSA/blob/master/image/Screenshot/KSSA_Login.png)
