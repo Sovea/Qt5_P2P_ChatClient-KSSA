@@ -37,10 +37,17 @@ A P2P chat application client for local area network (Windows) developed using Q
 
 ##### 1.QVector <QTcpSocket*> ListTcpsocket maintains a list of sockets
 ##### 2. QSignalMapper does the mapping of binding events (solves the problem that SLOT cannot pass parameters)
+
+```c++
+    ServerMapper->setMapping(LinkInfo.ListTcpsocket.last(),LinkInfo.ListTcpsocket.count());
+    connect(LinkInfo.ListTcpsocket.last(), SIGNAL(readyRead()), ServerMapper, SLOT(map()));
+    connect(ServerMapper, SIGNAL(mapped(int)), this, SLOT(changeTempTcpsocket(int)));
+```
+
 ##### 3. QBuffer unified data transmission method, easy to read and write:
 
 ```c++
-QByteArray data;
+    QByteArray data;
     data.resize(sizeof(LoginMessage));
     QBuffer buffer(&data);
     buffer.open(QIODevice::WriteOnly);
@@ -56,7 +63,7 @@ QByteArray data;
 ```
 
 ```c++
-QByteArray data = this->tcpSocket->readAll();
+    QByteArray data = this->tcpSocket->readAll();
     QBuffer buf(&data);
     buf.open(QIODevice::ReadOnly);
     QDataStream in(&buf);
