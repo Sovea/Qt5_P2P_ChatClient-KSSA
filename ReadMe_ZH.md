@@ -32,8 +32,49 @@
 
 6.一对一聊天消息面板
 
+### 项目重点介绍
+
+##### 1.QVector <QTcpSocket*> ListTcpsocket维持套接字列表
+
+##### 2.QSignalMapper做绑定事件的映射（解决SLOT无法传参的问题）
+
+```c++
+ServerMapper->setMapping(LinkInfo.ListTcpsocket.last(),LinkInfo.ListTcpsocket.count());
+    connect(LinkInfo.ListTcpsocket.last(), SIGNAL(readyRead()), ServerMapper, SLOT(map()));
+    connect(ServerMapper, SIGNAL(mapped(int)), this, SLOT(changeTempTcpsocket(int)));
+```
+
+##### 3.QBuffer统一数据发送方式，便于读写：
+
+```c++
+QByteArray data;
+    data.resize(sizeof(LoginMessage));
+    QBuffer buffer(&data);
+    buffer.open(QIODevice::WriteOnly);
+    QDataStream out(&buffer);
+    LoginMessage Message;
+    Message.type=UsrLogin;
+    qDebug()<<user_id <<user_password<<endl;
+    Message.userid=user_id;
+    Message.password=user_password;
+    Message.Message="I want to login in,please.";
+    out<<Message.type<<Message.userid<<Message.password<<Message.Message<<true;
+	buffer.close();
+```
+
+```c++
+QByteArray data = this->tcpSocket->readAll();
+    QBuffer buf(&data);
+    buf.open(QIODevice::ReadOnly);
+    QDataStream in(&buf);
+```
+
+##### 4.客户端套接字解释：tcpSocket连接服务器；tempP2P负责转为活动套接字，后台默默接收数据；nowP2P接收P2P请求；actP2P发送P2P请求
+
+##### 5.发送接收文件流程：emitFile类型消息发送接收文件详细信息，对方创建文件并打开进度条面板；File类型消息发送接收文件内容，更新进度条；accessFile返回接收确认消息，表示本组数据接收完成，等待下一组。
 
 #### 效果截图
 ![KSSA_Login](https://github.com/Sovea/Qt5_P2P_ChatClient-KSSA/blob/master/image/Screenshot/KSSA_Login.png)
 
 ![KSSA_ChatExample](https://github.com/Sovea/Qt5_P2P_ChatClient-KSSA/blob/master/image/Screenshot/KSSA_ChatExample.png)
+
