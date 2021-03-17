@@ -39,7 +39,7 @@
 ##### 2.QSignalMapper做绑定事件的映射（解决SLOT无法传参的问题）
 
 ```c++
-ServerMapper->setMapping(LinkInfo.ListTcpsocket.last(),LinkInfo.ListTcpsocket.count());
+    ServerMapper->setMapping(LinkInfo.ListTcpsocket.last(),LinkInfo.ListTcpsocket.count());
     connect(LinkInfo.ListTcpsocket.last(), SIGNAL(readyRead()), ServerMapper, SLOT(map()));
     connect(ServerMapper, SIGNAL(mapped(int)), this, SLOT(changeTempTcpsocket(int)));
 ```
@@ -47,7 +47,7 @@ ServerMapper->setMapping(LinkInfo.ListTcpsocket.last(),LinkInfo.ListTcpsocket.co
 ##### 3.QBuffer统一数据发送方式，便于读写：
 
 ```c++
-QByteArray data;
+    QByteArray data;
     data.resize(sizeof(LoginMessage));
     QBuffer buffer(&data);
     buffer.open(QIODevice::WriteOnly);
@@ -63,7 +63,7 @@ QByteArray data;
 ```
 
 ```c++
-QByteArray data = this->tcpSocket->readAll();
+    QByteArray data = this->tcpSocket->readAll();
     QBuffer buf(&data);
     buf.open(QIODevice::ReadOnly);
     QDataStream in(&buf);
