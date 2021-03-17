@@ -2,7 +2,7 @@
 
 一个使用Qt5以及C++开发的适用于局域网（Windows）的P2P聊天应用客户端。
 
-#### 使用技术：
+### 使用技术：
 
 1.Qt5/C++开发
 
@@ -18,7 +18,7 @@
 
 7.利用MapSignal传递自定义参数给connect的SLOT函数，实现对应Socket的切换
 
-#### 实现功能：
+### 实现功能：
 
 1.添加/删除好友
 
@@ -73,7 +73,7 @@ QByteArray data = this->tcpSocket->readAll();
 
 ##### 5.发送接收文件流程：emitFile类型消息发送接收文件详细信息，对方创建文件并打开进度条面板；File类型消息发送接收文件内容，更新进度条；accessFile返回接收确认消息，表示本组数据接收完成，等待下一组。
 
-#### 效果截图
+### 效果截图
 ![KSSA_Login](https://github.com/Sovea/Qt5_P2P_ChatClient-KSSA/blob/master/image/Screenshot/KSSA_Login.png)
 
 ![KSSA_ChatExample](https://github.com/Sovea/Qt5_P2P_ChatClient-KSSA/blob/master/image/Screenshot/KSSA_ChatExample.png)
