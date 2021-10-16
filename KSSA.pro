@@ -17,40 +17,40 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    Login.cpp \
-    bubble-widget.cpp \
-    chatbuddy.cpp \
-    clicklabel.cpp \
-    dialog.cpp \
-    info_card.cpp \
-    main.cpp \
-    mainwindow.cpp \
-    new_friend_buddy.cpp \
-    personbuddy.cpp \
-    progressbar.cpp
+    src/Login.cpp \
+    src/bubble-widget.cpp \
+    src/chatbuddy.cpp \
+    src/clicklabel.cpp \
+    src/dialog.cpp \
+    src/info_card.cpp \
+    src/main.cpp \
+    src/mainwindow.cpp \
+    src/new_friend_buddy.cpp \
+    src/personbuddy.cpp \
+    src/progressbar.cpp
 
 HEADERS += \
-    Login.h \
-    bubble-widget.h \
-    chatbuddy.h \
-    clicklabel.h \
-    dialog.h \
-    info_card.h \
-    mainwindow.h \
-    new_friend_buddy.h \
-    personbuddy.h \
-    progressbar.h
+    src/Login.h \
+    src/bubble-widget.h \
+    src/chatbuddy.h \
+    src/clicklabel.h \
+    src/dialog.h \
+    src/info_card.h \
+    src/mainwindow.h \
+    src/new_friend_buddy.h \
+    src/personbuddy.h \
+    src/progressbar.h
 
 FORMS += \
-    Login.ui \
-    bubble-widget.ui \
-    chatbuddy.ui \
-    dialog.ui \
-    info_card.ui \
-    mainwindow.ui \
-    new_friend_buddy.ui \
-    personbuddy.ui \
-    progressbar.ui
+    src/Login.ui \
+    src/bubble-widget.ui \
+    src/chatbuddy.ui \
+    src/dialog.ui \
+    src/info_card.ui \
+    src/mainwindow.ui \
+    src/new_friend_buddy.ui \
+    src/personbuddy.ui \
+    src/progressbar.ui
 
 TRANSLATIONS += \
     KSSA_zh_CN.ts
@@ -61,64 +61,38 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    ChatBox.qml \
-    ChatBuddy.qml \
-    ChatBuddyForm.ui.qml \
-    icon_file/7z.png \
-    icon_file/c.png \
-    icon_file/cpp.png \
-    icon_file/doc.png \
-    icon_file/docx.png \
-    icon_file/exe.png \
-    icon_file/jpg.png \
-    icon_file/mkv.png \
-    icon_file/mp3.png \
-    icon_file/mp4.png \
-    icon_file/pdf.png \
-    icon_file/png.png \
-    icon_file/py.png \
-    icon_file/sql.png \
-    icon_file/txt.png \
-    icon_file/zip.png \
-    image/KSSAA.png \
-    image/KSSA_Back.png \
-    image/KSSA_Icon.png \
-    image/KSSA_Login_Title.png \
-    image/back_progressbar.jpg \
-    image/cube.jpg \
-    image/cubee.jpg \
-    image/head_pic/head_pic1.jpg \
-    image/head_pic/head_pic2.jpg \
-    image/head_pic/head_pic3.jpg \
-    image/head_pic/head_pic4.jpg \
-    image/head_pic/head_pic5.jpg \
-    image/icon_file.png \
-    image/main_back.jpg \
-    image/main_back2.jpg \
-    image/pic/32764888973_8c8a7ac1b7_o.jpg \
-    image/pic/alex-simpson-sCq3bz253xs-unsplash.jpg \
-    image/pic/alex-simpson-vFb4K-KZ5a8-unsplash.jpg \
-    image/pic/anja-junghans-8SdYMct3zI4-unsplash.jpg \
-    image/pic/anton-darius-xYIuqpHD2oQ-unsplash.jpg \
-    image/pic/arto-marttinen-pQS0ETF3KTI-unsplash.jpg \
-    image/pic/brett-jackson-a81-5nFX-_Y-unsplash.jpg \
-    image/pic/cameron-venti-bS5OwMjMc1I-unsplash.jpg \
-    image/pic/carles-rabada-IMNKkZfzsSI-unsplash.jpg \
-    image/pic/daniele-franchi-dt0yhDQmJ4k-unsplash.jpg \
-    image/pic/diego-ph-VmRxRz0gD_s-unsplash.jpg \
-    image/pic/hannah-rodrigo-mf_3yZnC6ug-unsplash.jpg \
-    image/pic/igor-sergeyev-2N0Ol4TgNQU-unsplash.jpg \
-    image/pic/james-penhey-KkHNZ2JTDgQ-unsplash.jpg \
-    image/pic/jerry-wang-ARgNgdFXAS4-unsplash.jpg \
-    image/pic/jerry-wang-mnFKp-h1GUo-unsplash.jpg \
-    image/pic/patrick-hendry-6xTCch1CbcE-unsplash.jpg \
-    image/pic/quino-al-JFeOy62yjXk-unsplash.jpg \
-    image/pic/samsommer-J3ABLQjZQBg-unsplash.jpg \
-    image/sparrowoo.jpg \
-    qml/ChatBox.qml \
-    qss/mainwindow.qss \
-    sound/newmessage.mp3 \
-    sound/newmessage.wav
+    src/qml/ChatBox.qml \
+    src/qml/ChatBuddy.qml \
+    src/qml/ChatBuddyForm.ui.qml \
+    src/icon_file/7z.png \
+    src/icon_file/c.png \
+    src/icon_file/cpp.png \
+    src/icon_file/doc.png \
+    src/icon_file/docx.png \
+    src/icon_file/exe.png \
+    src/icon_file/jpg.png \
+    src/icon_file/mkv.png \
+    src/icon_file/mp3.png \
+    src/icon_file/mp4.png \
+    src/icon_file/pdf.png \
+    src/icon_file/png.png \
+    src/icon_file/py.png \
+    src/icon_file/sql.png \
+    src/icon_file/txt.png \
+    src/icon_file/zip.png \
+    src/image/KSSAA.png \
+    src/image/KSSA_Back.png \
+    src/image/KSSA_Icon.png \
+    src/image/KSSA_Login_Title.png \
+    src/image/back_progressbar.jpg \
+    src/image/cube.jpg \
+    src/image/cubee.jpg \
+    src/image/addfriend-back.jpg \
+    src/image/icon_file.png \
+    src/image/main-back.jpg \
+    src/qss/mainwindow.qss \
+    src/sound/newmessage.mp3 \
+    src/sound/newmessage.wav
 
 RESOURCES += \
     Resources.qrc
