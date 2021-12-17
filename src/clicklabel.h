@@ -10,15 +10,15 @@ class ClickedLabel : public QLabel
 {
     Q_OBJECT
 public:
-    ClickedLabel(QWidget *parent):QLabel(parent){
-
+    ClickedLabel(QWidget *parent) : QLabel(parent)
+    {
     }
     ~ClickedLabel() {}
 signals:
-    void clicked(); // 点击信号
-protected:
-    void mousePressEvent(QMouseEvent*); // 重载了鼠标释放事件
+    void clicked();
 
+protected:
+    void mousePressEvent(QMouseEvent *);
 };
 
 #endif // CLICKEDLABEL_H

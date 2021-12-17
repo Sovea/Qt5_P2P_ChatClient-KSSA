@@ -3,8 +3,9 @@
 
 #include <QWidget>
 
-namespace Ui {
-class new_friend_buddy;
+namespace Ui
+{
+    class new_friend_buddy;
 }
 
 class new_friend_buddy : public QWidget
@@ -17,7 +18,6 @@ public:
     ~new_friend_buddy();
 
 private:
-
 };
 
 #endif // NEW_FRIEND_BUDDY_H

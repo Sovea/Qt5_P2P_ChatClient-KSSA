@@ -8,8 +8,9 @@
 #include <QQuickWidget>
 #include <QDateTime>
 
-namespace Ui {
-class BubbleWidget;
+namespace Ui
+{
+    class BubbleWidget;
 }
 
 class BubbleWidget : public QWidget
@@ -18,18 +19,13 @@ class BubbleWidget : public QWidget
 
 public:
     explicit BubbleWidget(QWidget *parent = 0);
-     Ui::BubbleWidget *ui;
+    Ui::BubbleWidget *ui;
     ~BubbleWidget();
-
-    void appendMessage(QString from, QString to,QString headimg, QString content, QString time,QString fileimg);
+    void appendMessage(QString from, QString to, QString headimg, QString content, QString time, QString fileimg);
 
 private slots:
-//    void on_pushButton_clicked();
-
-//    void on_pushButton_2_clicked();
 
 private:
-
 };
 
 #endif // BUBBLEWIDGET_H

@@ -7,8 +7,9 @@
 #include <QVariant>
 #include <QDebug>
 #include <QMessageBox>
-namespace Ui {
-class Login;
+namespace Ui
+{
+    class Login;
 }
 
 class Login : public QWidget

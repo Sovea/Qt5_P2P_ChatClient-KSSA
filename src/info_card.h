@@ -3,8 +3,9 @@
 
 #include <QDialog>
 
-namespace Ui {
-class Info_Card;
+namespace Ui
+{
+    class Info_Card;
 }
 
 class Info_Card : public QDialog
@@ -17,7 +18,6 @@ public:
     ~Info_Card();
 
 private:
-
 };
 
 #endif // INFO_CARD_H

@@ -6,16 +6,10 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    //    MainWindow w;
-    //    w.setWindowTitle("KSSA");
-    //    w.setWindowIcon(QIcon(":/src/image/KSSA_Icon.png"));
-    //    w.show();
     Login l;
     l.setWindowTitle("KSSA");
     l.setWindowIcon(QIcon(":/src/image/KSSA_Icon.png"));
     l.show();
-//    PersonBuddy p;
-//    p.show();
     return a.exec();
 
 }

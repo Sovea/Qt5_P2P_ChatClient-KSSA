@@ -3,8 +3,9 @@
 
 #include <QWidget>
 
-namespace Ui {
-class ChatBuddy;
+namespace Ui
+{
+    class ChatBuddy;
 }
 
 class ChatBuddy : public QWidget
