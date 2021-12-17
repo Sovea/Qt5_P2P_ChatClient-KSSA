@@ -2,7 +2,7 @@
 **[中文介绍](https://github.com/Sovea/Qt5_P2P_ChatClient-KSSA/blob/master/ReadMe_ZH.md)**
 
 A P2P chat application client for local area network (Windows) developed using Qt5 and C++.
-
+> `Basic training project after C language and computer network courses`
 ### Use technology:
 
 1. Qt5/C++ development
@@ -73,6 +73,6 @@ A P2P chat application client for local area network (Windows) developed using Q
 ##### 5. The process of sending and receiving files: the emitFile type message sends and receives the detailed information of the file. After the other party receives it, it creates the corresponding file and opens the progress bar panel; File type messages are used to send or receive file content and update the progress bar; accessFile type messages Responsible for sending or receiving confirmation, indicating that the reception of this group of data is complete and waiting for the next group of data.
 
 ### ScreenShots
-![KSSA_Login](https://github.com/Sovea/Qt5_P2P_ChatClient-KSSA/tree/master/src/image/Screenshot/KSSA_Login.png)
+![KSSA_Login](src/image/Screenshot/KSSA_Login.png)
 
-![KSSA_ChatExample](https://github.com/Sovea/Qt5_P2P_ChatClient-KSSA/tree/master/src/image/Screenshot/KSSA_ChatExample.png)
+![KSSA_ChatExample](src/image/Screenshot/KSSA_ChatExample.png)
